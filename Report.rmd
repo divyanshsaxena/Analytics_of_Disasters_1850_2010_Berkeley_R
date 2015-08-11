@@ -1,0 +1,86 @@
+---
+title: "Report"
+author: "Divyansh Saxena"
+date: "10 August 2015"
+output: word_document
+---
+
+Project is divided into 3 categories -
+
+1. Data Processing
+2. Data Analysis
+3. Data Visualization
+
+Part 1 - Data Processing
+
+In this section, first I imported the data from ftp://eclipse.ncdc.noaa.gov/pub/ibtracs/v03r06/wmo/hurdat_format/basin/Basin.NA.ibtracs_hurdat.v03r06.hdat
+
+This data was categorized into 3 parts - Header, Daily Data and Trailer
+
+After importing the dataset, I created two Comma Separated Values (CSV) files named storms.csv and tracks.csv
+
+storms.csv
+
+To create storms.csv, I used Header section of the imported data having following columns - 
+Storm ID
+Date
+Days of Storm
+Name of Storm
+
+tracks.csv
+
+To create tracks.csv, I used Header as well as Daily Data section of the imported data having following columns - 
+Storm ID
+Date
+Period
+Stage
+Latitude
+Longitude
+Wind
+Pressure
+
+Purpose behind creating these two files was to ease the data analysis part which is the next section.
+
+Part 2 - Data Analysis
+
+In this section, using the above created files, I found out some key insights using R functions.
+
+This Analysis has two categories - Descriptive and Predictive
+
+Descriptive Analysis
+In this part, using the storms.csv, I performed following statistics - 
+Yearly Basis
+Monthly Basis
+
+Finally, I created a table that displays Standard Deviation and different percentiles for different types of storms depending upon their wind speed.
+
+Predictive Analytics
+This part was implemented using Linear Regression Analysis on Mean and Median.
+Used regression function in R to get the slope and intercept of the regression line which could be later used for predicting. 
+
+Plotted these regression lines between Pressure and Wind Speed which makes it easier to predict one of them based on the other one.
+
+Part 3 - Data Visualization
+
+Final part of this project was Data Visualization. Main purpose of this part was to plot trajectories of all storms from 1980-2010. 
+
+These visualizations were categorized into 3 parts - 
+
+Yearly Basis
+Monthly Basis
+Decade - Wise
+
+These are the PNG files that were generated.
+
+![1980-2010](C:\Users\Divyansh\Documents\Final Project\Images\1980-2010.png)
+![Decade1980](C:\Users\Divyansh\Documents\Final Project\Images\Decade1980.png)
+![Decade1990](C:\Users\Divyansh\Documents\Final Project\Images\Decade1990.png)
+![Decade2000](C:\Users\Divyansh\Documents\Final Project\Images\Decade2000.png)
+![May](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 5.png)
+![June](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 6.png)
+![July](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 7.png)
+![August](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 8.png)
+![September](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 9.png)
+![October](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 10.png)
+![November](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 11.png)
+![December](C:\Users\Divyansh\Documents\Final Project\Images\Month Number 12.png)
